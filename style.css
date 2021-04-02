@@ -28,7 +28,9 @@ svg#sankey path {
 body {
     font-family: "Lato",sans-serif; 
     background: #eee;
-    margin: 50px
+    margin: 50px;
+    /* height: auto; */
+    /* width: 100vw; */
 }
 
 text {
