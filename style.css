@@ -12,6 +12,11 @@ g.lines path {
     mix-blend-mode: overlay;
 }
 
+svg#sankey {
+   /* padding: 50px; */
+   margin-top: 0px;
+}
+
 svg#sankey rect {
     /* fill: rgba(120, 120, 120, 0.7); */
 }
@@ -23,10 +28,15 @@ svg#sankey path {
 body {
     font-family: "Lato",sans-serif; 
     background: #eee;
+    margin: 50px
 }
 
 text {
-    font-size: 9pt; 
+    font-size: 8pt;
+    text-align: right;
+
 }
 
-
+#header h4 {
+    margin-bottom: 0;
+}

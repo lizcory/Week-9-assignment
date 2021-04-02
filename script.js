@@ -74,11 +74,14 @@ function drawSankey(data) {
     // draw labels
     containerG.selectAll('text')
         .data(sankey.nodes)
-        .join('text')
-        .text(d => d.name)
+        .join('text') // text alignment from the referenced observable example
+            .attr("x", d => d.x0 < size.w / 2 ? d.x1 + 6 : d.x0 - 6)
+            .attr("y", d => (d.y1 + d.y0) / 2)
+            .attr("dy", "0.35em")
+            .attr("text-anchor", d => d.x0 < size.w / 2 ? "start" : "end")
+            .text(d => d.name);
+        // .text(d => d.name)
         // .attr('transform', d => `translate(${d.x0}, ${d.y0}) rotate(90)`);
-        .attr('transform', d => `translate(${d.x0}, ${d.y0})`);
-
 
 
 }
