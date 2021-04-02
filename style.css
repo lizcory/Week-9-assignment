@@ -13,7 +13,7 @@ g.lines path {
 }
 
 svg#sankey rect {
-    fill: rgba(120, 120, 120, 0.7);
+    /* fill: rgba(120, 120, 120, 0.7); */
 }
 svg#sankey path {
     fill: none;
@@ -23,4 +23,5 @@ svg#sankey path {
 body {
     font-family: "Lato",sans-serif; 
     font-size: 9pt;
+    background: #eee;
 }

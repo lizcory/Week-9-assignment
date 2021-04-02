@@ -51,6 +51,9 @@ function drawSankey(data) {
 
     // console.log(sankeyLayout(data));
 
+    // make color function 
+    let nodeColorScale = d3.scaleOrdinal(d3.schemeCategory10);
+
     // draw nodes
     containerG.selectAll('rect')
         .data(sankey.nodes)
@@ -58,7 +61,8 @@ function drawSankey(data) {
         .attr('x', d => d.x0)
         .attr('y', d => d.y0)
         .attr('width', d => d.x1-d.x0)
-        .attr('height', d => d.y1-d.y0);
+        .attr('height', d => d.y1-d.y0)
+        .attr('fill', d => nodeColorScale(d.category)); 
 
     // draw links
     containerG.selectAll('path')
@@ -72,7 +76,9 @@ function drawSankey(data) {
         .data(sankey.nodes)
         .join('text')
         .text(d => d.name)
-        .attr('transform', d => `translate(${d.x0}, ${d.y0}) rotate(90)`);
+        // .attr('transform', d => `translate(${d.x0}, ${d.y0}) rotate(90)`);
+        .attr('transform', d => `translate(${d.x0}, ${d.y0})`);
+
 
 
 }
