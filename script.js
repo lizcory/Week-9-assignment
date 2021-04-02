@@ -1,5 +1,5 @@
 const margin = {t: 50, r:50, b: 50, l: 50};
-const size = {w: 1200, h: 1000};
+const size = {w: 1200, h: 700};
 const svg = d3.select('svg#sankey');
 
 svg.attr('width', size.w)
